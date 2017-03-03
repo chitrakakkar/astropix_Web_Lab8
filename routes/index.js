@@ -25,8 +25,10 @@ router.get('/fetch_picture', function(req, res, next){
   }
   else if (req.query.random) {
 
-    apod(function(data, error) {
-      if (error) {
+    apod(function(data, error)
+    {
+      if (error)
+      {
         return res.render('apod_error', { error : error.message });
       }
 
@@ -34,7 +36,8 @@ router.get('/fetch_picture', function(req, res, next){
       return res.render('picture', { apod : data });
     });
 
-  } else {
+  } else
+    {
     next();  // Send to next route handler.
     // Since we haven't defined one, this will end up at the 404 error handler
   }

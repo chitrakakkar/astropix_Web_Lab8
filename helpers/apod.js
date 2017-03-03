@@ -1,6 +1,3 @@
-/**
- * Created by chitrakakkar on 3/2/17.
- */
 var request = require('request');
 var moment = require('moment');
 
