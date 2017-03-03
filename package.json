@@ -15,5 +15,12 @@
     "morgan": "~1.7.0",
     "request": "^2.79.0",
     "serve-favicon": "~2.3.2"
+  },
+  "engines": {
+    "node":"6.9.1",
+    "npm":"3.10.8"
+
+
   }
+
 }
