@@ -1,0 +1,15 @@
+<h1>{{title}}</h1>
+{{#if apod.is_image}}
+<img src="{{apod.image_url}}>
+{{else}}
+<p>Today's picture is a video or another media type.
+<a href="{{apod.url}}">Please click here to view.
+
+{{/if}}
+
+<p>{{apod.credit}}</p>
+<p>{{apod.description}}</p>
+<p>This is NASA'S Astronomy Picture of the day for {{apod.date}}</p>
+<p><a href="{{apod.nasa_url}}">See this imageat Nasa's website</a></p>
+
+{{>navigation}}
