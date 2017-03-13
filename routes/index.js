@@ -3,16 +3,19 @@ var router = express.Router();
 var apod = require('../helpers/apod');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res, next)
+{
   res.render('index', { title: 'Express' });
 });
 
 /*get a picture from
 
  */
-router.get('/fetch_picture', function(req, res, next){
-
-  if (req.query.today) {
+router.get('/fetch_picture', function(req, res, next)
+{
+    //req.query is the query string sent to the server-today in this case;
+  if (req.query.today)
+  {
 
     apod(function(data, error){
       if (error) {
@@ -23,7 +26,8 @@ router.get('/fetch_picture', function(req, res, next){
     }, true);
 
   }
-  else if (req.query.random) {
+  else if (req.query.random) //req.query is the query string sent to the server-random in this case;
+  {
 
     apod(function(data, error)
     {
@@ -43,4 +47,4 @@ router.get('/fetch_picture', function(req, res, next){
   }
 
 });
-module.exports = router;
+module.exports = router;//// exposing the router variable globally to be used into different files.

@@ -10,7 +10,8 @@ var baseURL = 'https://api.nasa.gov/planetary/apod';
 // If today is provided, fetch today's image,
 // otherwise, fetch a random image.
 
-function apodRequest(callback, today) {
+function apodRequest(callback, today)
+{
 
     var queryParam = {};
     var APIKEY = process.env.APOD_API_KEY;  // Make sure an environment variable is set, containing a valid APOD key
@@ -34,7 +35,8 @@ function apodRequest(callback, today) {
             callback(jsonForTemplate);
         }
 
-        else {
+        else
+            {
             //Log error info to console and return error with message.
             console.log("Error in JSON request: " + error);
             console.log(apod_response);
@@ -109,7 +111,8 @@ function processAPODresponse(today, apodJSON){
 
 //APOD started on June 16th, 1995. Select a random date between
 //then and yesterday.  Convert to a string in YYYY-MM-DD format.
-function randomDateString(){
+function randomDateString()
+{
 
     //Create data objects for yesterday, and APOD start date
     var today = moment().subtract(1, 'days');
