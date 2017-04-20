@@ -46,7 +46,7 @@ router.post('/delete', function(req, res, next)
     {
             return item.date!== item_to_be_deleted
     });
-    res.render('favorites', {favorites : req.session.favorites});
+    res.redirect('/favorites');
 
 });
 
