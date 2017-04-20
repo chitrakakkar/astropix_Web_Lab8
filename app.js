@@ -6,7 +6,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var hbs = require('express-handlebars');
-var session = require('express-sessions');
+var session = require('express-session');
 var MongoDBStore = require('connect-mongodb-session')(session);
 
 var index = require('./routes/index');

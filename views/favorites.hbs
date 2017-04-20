@@ -7,7 +7,14 @@
         </a>
         <p class="favtitle">{{this.title}}</p>
         <p class="favdate">{{this.date}}</p>
+        <div class="DeleteFromFavorites">
+            <form action="/favorites/delete" method="POST">
+                <input type="hidden" name="date" value="{{this.date}}">
+                <input type="submit" class="btn btn-success" name="delete" value="Delete">
+            </form>
+        </div>
     </div>
+
 {{else}}
     <p>No favorites saved yet.</p>
 {{/each}}
