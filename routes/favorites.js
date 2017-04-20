@@ -46,6 +46,7 @@ router.post('/delete', function(req, res, next)
     {
             return item.date!== item_to_be_deleted
     });
+    // returns the favorite page
     res.redirect('/favorites');
 
 });
