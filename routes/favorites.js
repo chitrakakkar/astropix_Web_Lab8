@@ -39,7 +39,9 @@ router.post('/add', function(req, res, next)
 /* delete selected items */
 router.post('/delete', function(req, res, next)
 {
+    //picks the date as date is the unique key;
     var item_to_be_deleted= req.body.date;
+    //http://stackoverflow.com/questions/5767325/how-to-remove-a-particular-element-from-an-array-in-javascript/20690490#20690490
     req.session.favorites = req.session.favorites.filter(function(item)
     {
             return item.date!== item_to_be_deleted
